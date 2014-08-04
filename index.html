@@ -16,12 +16,22 @@
 	</div>
 <!-- Handlebars templates -->
 	<script id="products-template" type="text/x-handlebars-template">
-		<div class="product media">
+		<div class="products media">
 			<img class="game-image pull-left" src={{image}}>
-			<h2 class="game-title">{{title}}</h2>
-			<p class="game-cost">${{cost}}</p>
-			<button class="btn btn-primary add-wishlist">Add to your Wishlist</button>
-			
+			<div class="media-body">
+				<h2 class="game-title">{{title}}</h2>
+				{{#if sale}}
+					<p class="game-cost striked">${{cost}}</p>
+					<p class="game-cost sale-cost">Sale price: ${{sale}}</p>
+				{{/if}}
+				{{#unless sale}}
+					<p class="game-cost">${{cost}}</p>
+				{{/unless}}
+				{{#each details}}
+					<p>{{@key}}: {{this}}</p>
+				{{/each}}
+				<button class="btn btn-primary add-wishlist">Add to your Wishlist</button>
+			</div>
 		</div>
 	</script>
 

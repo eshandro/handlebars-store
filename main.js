@@ -5,7 +5,7 @@ $(document).on('ready', function() {
 
 	for (var i = 0; i < productsData.productsList.length; i++) {
 		$('#product-container')
-		.append( productsTemplate( productsData.productsList[i]))
+		.append( productsTemplate( productsData.productsList[i] ))
 	};
 
 	var wishlistTemplateSource = $('#wishlist-item').html();
@@ -14,7 +14,7 @@ $(document).on('ready', function() {
 	$(document).on('click', '.add-wishlist', function(error) {
 		var gameTitle = $(this).siblings('.game-title').text();
 		console.log(gameTitle);
-		var gameCost = $(this).siblings('.game-cost').text();
+		var gameCost = $(this).siblings('.game-cost:last').text();
 		console.log(gameCost);
 
 		$('#wishlist').append(wishlistTemplate( {title: gameTitle, cost: gameCost} ));

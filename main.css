@@ -1,0 +1,15 @@
+.sale-cost {
+	color: red;
+}
+
+.striked {
+	text-decoration: line-through;
+}
+
+.products {
+	overflow: hidden;
+}
+
+.game-image {
+	overflow: hidden;
+}
