@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="container">
+		<div id="product-container">
+		</div>
+		<ul id="wishlist">
+
+		</ul>
+	</div>
+<!-- Handlebars templates -->
+	<script id="products-template" type="text/x-handlebars-template">
+		<div class="product media">
+			<img class="game-image pull-left" src={{image}}>
+			<h2 class="game-title">{{title}}</h2>
+			<p class="game-cost">${{cost}}</p>
+			<button class="btn btn-primary add-wishlist">Add to your Wishlist</button>
+			
+		</div>
+	</script>
+
+	<script id="wishlist-item" type="text/x-handlebars-template">
+		<li><h2>{{title}}</h2>
+			<p>{{cost}}</p>
+			<button class="btn btn-warning remove-button">Remove from Wishlist
+			</button>
+	</script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>  
+  <script src="products-data.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
